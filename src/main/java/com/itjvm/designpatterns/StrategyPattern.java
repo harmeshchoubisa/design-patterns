@@ -3,6 +3,8 @@ package com.itjvm.designpatterns;
 import java.util.List;
 import java.util.function.Predicate;
 
+import static com.itjvm.designpatterns.common.DataProvider.getEmployeeList;
+
 public class StrategyPattern {
 
 
@@ -19,10 +21,4 @@ public class StrategyPattern {
         return employeeList.stream().filter(selector).toList();
     }
 
-    private static List<Employee> getEmployeeList() {
-        return List.of(new Employee("John", 5000, 101, true),
-                new Employee("Mac", 3000, 102, true),
-                new Employee("Jatin", 2000, 103, true),
-                new Employee("Leo", 1000, 104, false));
-    }
 }
